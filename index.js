@@ -22,7 +22,7 @@ css`
     border: 0;
     text-align: center;
     border-bottom: 1px solid #d8d8d8;
-    font-size: 14px;
+    font-size: 1rem;
     transition: border-bottom-color 100ms ease-in, color 100ms ease-in;
     max-width: 200px;
     border-radius: 0;
@@ -49,15 +49,28 @@ css`
     flex-direction: column;
   }
 
+  .clap {
+    cursor: pointer;
+    line-height: 0;
+    padding: 20px 0 50px 0;
+    transition: transform 150ms ease-out;
+  }
+
+  .clap:hover {
+    transform: scale(1.3);
+    transition: transform 250ms cubic-bezier(0,2.5,.6,.6);
+  }
+
+  .clap:active, .clap.clicked {
+    transform: scale(1);
+    transition-timing-function: ease-out;
+  }
+
   aside {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0 40px 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    padding: 140px 0 40px 0;
   }
   
   aside nav {
@@ -68,7 +81,7 @@ css`
   }
 
   aside nav a {
-    font-size: 13px;
+    font-size: 0.825rem;
     color: #b2b2b2;
     text-decoration: none;
     transition: color 100ms ease-in;
